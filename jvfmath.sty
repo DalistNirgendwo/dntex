@@ -1,0 +1,45 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jvfmath}[2020/07/07 Johannes von Falkensteins Standardpackage mathematische TeX-Dokumente]
+
+%===================PACKAGES=========================================================
+
+\usepackage{enumitem,microtype,lmodern}						%Diverses
+\usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}		%Mathekram
+\usepackage{hyperref}		%Hyperlinks
+
+%==========================COMMANDS==============================================
+
+%==Körper==
+\newcommand{\N}{\mathbb{N}}																	
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+
+%==Matrix-Körper==
+\newcommand{\Rnn}{\mathbb{R}^{n \times n}}													
+\newcommand{\Rmm}{\mathbb{R}^{m \times m}}
+\newcommand{\Rnm}{\mathbb{R}^{n \times m}}
+\newcommand{\Rmn}{\mathbb{R}^{m \times n}}
+\newcommand{\Cnn}{\mathbb{C}^{n \times n}}													
+\newcommand{\Cmm}{\mathbb{C}^{m \times m}}
+\newcommand{\Cnm}{\mathbb{C}^{n \times m}}
+\newcommand{\Cmn}{\mathbb{C}^{m \times n}}
+
+
+%==quality of life==
+\renewcommand{\d}{\ \operatorname{d}\hspace{-2px}}											
+\newcommand{\del}{\partial}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Span}{Span}
+\newcommand{\bound}[2]{\left.#1\right|_{#2}}		%Einschränkungen
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+
+%==FT-spezifische Sachen==
+\renewcommand{\O}{\mathcal{O}}																
+\newcommand{\ord}[2]{\operatorname{ord} \left( #1,#2 \right)}
+\newcommand{\Ind}[1]{\operatorname{Ind}_{#1}}
+\newcommand{\Res}[2]{\operatorname{Res} \left( #1;#2 \right) }
