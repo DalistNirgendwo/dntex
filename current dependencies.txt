@@ -1,0 +1,7 @@
+These packages depend on each other as follows:
+
+jvfscript.cls requires
+	jvfscriptstyle
+
+jvfscriptstyle.sty requires
+	jvfmath
