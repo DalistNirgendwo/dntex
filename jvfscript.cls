@@ -29,10 +29,13 @@
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \clearscrheadfoot
+\setkomafont{pageheadfoot}{\upshape}
 \renewcommand{\chaptermark}[1]{%
-	\markboth{\thechapter.\ #1}{}}
+	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
-\ihead{\leftmark\ - \rightmark}
+\rehead{\leftmark}
+\lohead{\rightmark}
 \chead{}
 \ohead{Vorlesung \arabic{lecture}}
-\cfoot{\thepage}
+\lefoot{\thepage}
+\rofoot{\thepage}
