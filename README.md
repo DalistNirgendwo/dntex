@@ -1,1 +1,1 @@
-Vorlagen für verschiedenste Dateien wie z.B. Vorlesungsskripte
+Johannes von Falkenstein's custom LaTeX packages and documentclasses
