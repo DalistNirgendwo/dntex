@@ -1,15 +1,15 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{jvfmath}[2020/07/07 Johannes von Falkensteins Standardpackage mathematische TeX-Dokumente]
+\ProvidesPackage{jvfmath}[2020/07/07 Johannes von Falkensteins standardpackage for mathematical TeX-documents]
 
 %===================PACKAGES=========================================================
 
-\usepackage{enumitem,microtype,lmodern}						%Diverses
-\usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}		%Mathekram
+\usepackage{enumitem,microtype,lmodern}						%Diverse
+\usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}		%assorted ams packages
 \usepackage{hyperref}		%Hyperlinks
 
 %==========================COMMANDS==============================================
 
-%==Körper==
+%==fields==
 \newcommand{\N}{\mathbb{N}}																	
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -17,7 +17,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\K}{\mathbb{K}}
 
-%==Matrix-Körper==
+%==matrix-fields==
 \newcommand{\Rnn}{\mathbb{R}^{n \times n}}													
 \newcommand{\Rmm}{\mathbb{R}^{m \times m}}
 \newcommand{\Rnm}{\mathbb{R}^{n \times m}}
@@ -34,11 +34,11 @@
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Span}{Span}
-\newcommand{\bound}[2]{\left.#1\right|_{#2}}		%Einschränkungen 
+\newcommand{\bound}[2]{\left.#1\right|_{#2}}		%Boundaries 
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 
 
-%==FT-spezifische Sachen==
+%==for Complex Analysis==
 \renewcommand{\O}{\mathcal{O}}																
 \newcommand{\ord}[2]{\operatorname{ord} \left( #1,#2 \right)}
 \newcommand{\Ind}[1]{\operatorname{Ind}_{#1}}
