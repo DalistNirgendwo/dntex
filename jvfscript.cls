@@ -90,5 +90,3 @@
 {: }% punctuation between head and body
 { }% space after theorem head; " " = normal interword space
 {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-
