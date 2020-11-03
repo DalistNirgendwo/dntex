@@ -5,7 +5,7 @@
 
 \usepackage{enumitem,microtype,lmodern}						%Diverse
 \usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}		%assorted ams packages
-\usepackage{hyperref}		%Hyperlinks
+\usepackage{hyperref}										%Hyperlinks
 
 %==========================COMMANDS==============================================
 
@@ -27,6 +27,16 @@
 \newcommand{\Cnm}{\mathbb{C}^{n \times m}}
 \newcommand{\Cmn}{\mathbb{C}^{m \times n}}
 
+%==fancy letters=====
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\M}{\mathbb{M}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\A}{\mathfrak{A}}
+
+%==various homomorphisms====
+\newcommand{\Aut}{\text{Aut}}
+
 
 %==quality of life==
 \renewcommand{\d}{\ \operatorname{d}\hspace{-2px}}											
@@ -34,8 +44,10 @@
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Span}{Span}
-\newcommand{\bound}[2]{\left.#1\right|_{#2}}		%Boundaries 
+\newcommand{\bound}[2]{\left.#1\right|_{#2}}		                        %Boundaries 
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\newcommand{\divides}{\,\mid\,}                     
+\newcommand{\set}[2]{\left\{ #1 \,\middle|\, #2 \right\}}                   %for auto-sizing sets
 
 
 %==for Complex Analysis==

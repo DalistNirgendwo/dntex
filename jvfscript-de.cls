@@ -14,6 +14,9 @@
 
 \usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}		%Seitengröße
 \renewcommand{\epsilon}{\varepsilon}
+\newcommand{\image}[2]{\begin{center}
+		\includegraphics[width=#2]{#1}
+	\end{center}}
 
 %==========================DEUTSCH==============================================
 
@@ -69,6 +72,17 @@
 }
 \def\thmlopatch@endchapter{}
 
+%\def\ll@tdefn{%
+%	\protect\thmtopatch@numbernametext
+%	\ifx\@empty\thmt@shortoptarg\else[\thmt@shortoptarg]\fi
+%	{\csname the\thmt@envname\endcsname}%
+%	{\thmt@thmname}%
+%}
+%
+%\newcommand\thmtopatch@numbernametext[3][]{%
+%	#2 -- %
+%	\if\relax\detokenize{#1}\relax #3\else #1\fi
+%}
 \makeatother
 \renewcommand{\thmtformatoptarg}[1]{ -- #1}
 \renewcommand{\listtheoremname}{Liste der Definitionen}
@@ -104,31 +118,3 @@
 {: }% punctuation between head and body
 { }% space after theorem head; " " = normal interword space
 {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-\theoremstyle{newthm}
-\newtheorem{thm}{Satz}[section]
-\newtheorem{thmn}[thm]{Satz}
-\newtheorem{lem}[thm]{Lemma}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{cor}[thm]{Korollar}
-\newtheorem{corn}[thm]{Korollar}
-\newtheorem*{thm*}{Satz}
-\newtheorem*{thmn*}{Satz}
-\newtheorem*{lem*}{Lemma}
-\newtheorem*{prop*}{Proposition}
-\newtheorem*{cor*}{Korollar}
-\newtheorem*{corn*}{Korollar}
-
-\theoremstyle{newdef}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{conj}[thm]{Annahme}
-\newtheorem*{defn*}{Definition}
-\newtheorem*{conj*}{Annahme}
-
-\theoremstyle{newrem}
-\newtheorem{exmp}[thm]{Beispiel}
-\newtheorem{rem}[thm]{Bemerkung}
-\newtheorem{note}[thm]{Anmerkung}
-\newtheorem*{exmp*}{Beispiel}
-\newtheorem*{rem*}{Bemerkung}
-\newtheorem*{note*}{Anmerkung}
