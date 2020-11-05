@@ -48,6 +48,12 @@
 \newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
 \newcommand{\divides}{\,\mid\,}                     
 \newcommand{\set}[2]{\left\{ #1 \,\middle|\, #2 \right\}}                   %for auto-sizing sets
+\newcommand\vertarrowbox[3][6ex]{%
+	\begin{array}[t]{@{}c@{}} #2 \\
+		\left\uparrow\vcenter{\hrule height #1}\right.\kern-\nulldelimiterspace\\
+		\makebox[0pt]{\scriptsize#3}
+	\end{array}%
+}
 
 
 %==for Complex Analysis==
