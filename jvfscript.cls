@@ -5,11 +5,13 @@
 
 %===================PACKAGES=========================================================
 
+\usepackage{imakeidx}
 \usepackage{jvfmath}
 \usepackage{marginnote}		%für Anmerkungen, welche Vorlesung das ist
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
 \usepackage[UKenglish]{babel}
 \usepackage{lmodern}
+\usepackage{hyperref}		%Hyperlinks
 
 %==========================FORMATIERUNG=========================================
 
@@ -34,30 +36,6 @@
 
 \newcounter{lecture}
 \newcommand{\lecture}{\stepcounter{lecture} \marginnote{Vorlesung \arabic{lecture}}}
-
-%===================DEFINITIONSLISTE==================================================
-
-\usepackage{thmtools}
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\thmtlo@chaptervspacehack
-{\addtocontents{loe}{\protect\addvspace{10\p@}}}
-{\addtocontents{loe}{\protect\thmlopatch@endchapter\protect\thmlopatch@chapter{\thechapter}}}
-{}{}
-\AtEndDocument{\addtocontents{loe}{\protect\thmlopatch@endchapter}}
-\long\def\thmlopatch@chapter#1#2\thmlopatch@endchapter{%
-	\setbox\z@=\vbox{#2}%
-	\ifdim\ht\z@>\z@
-	\hbox{\bfseries\chaptername\ #1}\nobreak
-	#2
-	\addvspace{10\p@}
-	\fi
-}
-\def\thmlopatch@endchapter{}
-
-\makeatother
-\renewcommand{\thmtformatoptarg}[1]{ -- #1}
-\renewcommand{\listtheoremname}{List of definitions}
 
 %=============ENVIRONMENTS=======================================================
 

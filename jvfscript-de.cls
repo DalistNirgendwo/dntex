@@ -5,10 +5,12 @@
 
 %===================PACKAGES=========================================================
 
+\usepackage{imakeidx}
 \usepackage{jvfmath}
 \usepackage{marginnote}		%für Anmerkungen, welche Vorlesung das ist
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
 \usepackage{lmodern}
+\usepackage{hyperref}		%Hyperlinks
 
 %==========================FORMATIERUNG=========================================
 
@@ -51,41 +53,6 @@
 
 \newcounter{lecture}
 \newcommand{\lecture}{\stepcounter{lecture} \marginnote{Vorlesung \arabic{lecture}}}
-
-%===================DEFINITIONSLISTE==================================================
-
-\usepackage{thmtools}
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\thmtlo@chaptervspacehack
-{\addtocontents{loe}{\protect\addvspace{10\p@}}}
-{\addtocontents{loe}{\protect\thmlopatch@endchapter\protect\thmlopatch@chapter{\thechapter}}}
-{}{}
-\AtEndDocument{\addtocontents{loe}{\protect\thmlopatch@endchapter}}
-\long\def\thmlopatch@chapter#1#2\thmlopatch@endchapter{%
-	\setbox\z@=\vbox{#2}%
-	\ifdim\ht\z@>\z@
-	\hbox{\bfseries\chaptername\ #1}\nobreak
-	#2
-	\addvspace{10\p@}
-	\fi
-}
-\def\thmlopatch@endchapter{}
-
-%\def\ll@tdefn{%
-%	\protect\thmtopatch@numbernametext
-%	\ifx\@empty\thmt@shortoptarg\else[\thmt@shortoptarg]\fi
-%	{\csname the\thmt@envname\endcsname}%
-%	{\thmt@thmname}%
-%}
-%
-%\newcommand\thmtopatch@numbernametext[3][]{%
-%	#2 -- %
-%	\if\relax\detokenize{#1}\relax #3\else #1\fi
-%}
-\makeatother
-\renewcommand{\thmtformatoptarg}[1]{ -- #1}
-\renewcommand{\listtheoremname}{Liste der Definitionen}
 
 %=============ENVIRONMENTS=======================================================
 
