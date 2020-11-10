@@ -10,6 +10,7 @@
 \usepackage{marginnote}		%für Anmerkungen, welche Vorlesung das ist
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
 \usepackage{lmodern}
+\usepackage{wrapfig}
 \usepackage{hyperref}		%Hyperlinks
 
 %==========================FORMATIERUNG=========================================

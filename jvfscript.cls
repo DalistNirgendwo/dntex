@@ -11,6 +11,7 @@
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
 \usepackage[UKenglish]{babel}
 \usepackage{lmodern}
+\usepackage{wrapfig}
 \usepackage{hyperref}		%Hyperlinks
 
 %==========================FORMATIERUNG=========================================
