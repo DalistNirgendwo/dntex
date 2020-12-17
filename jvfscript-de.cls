@@ -57,6 +57,24 @@
 
 %=============ENVIRONMENTS=======================================================
 
+%\declaretheoremstyle[
+%headfont=\bfseries,
+%numbered=yes,
+%bodyfont=\itshape,
+%spaceabove=\topsep,
+%spacebelow=15pt,
+%headpunct=\\,
+%qed={\itshape That's All Folks!},
+%]{thmnew}
+%
+%\declaretheorem[
+%style=thmnew,
+%title=Beispiel,
+%parent=thm,
+%refname={example,examples},
+%Refname={Beispiel,Beispiele}
+%]{exmp2}
+
 \newtheoremstyle{newthm}% name of the style to be used
 {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
 {15pt}% measure of space to leave below the theorem. E.g.: 3pt
