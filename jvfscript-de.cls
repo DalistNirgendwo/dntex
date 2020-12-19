@@ -12,6 +12,7 @@
 \usepackage{lmodern}
 \usepackage{wrapfig}
 \usepackage{hyperref}		%Hyperlinks
+\usepackage{thmtools}
 
 %==========================FORMATIERUNG=========================================
 
@@ -20,6 +21,9 @@
 \newcommand{\image}[2]{\begin{center}
 		\includegraphics[width=#2]{#1}
 	\end{center}}
+
+\usepackage{aliascnt}
+\newaliascnt{chapter2}{chapter}%
 
 %==========================DEUTSCH==============================================
 
@@ -57,23 +61,29 @@
 
 %=============ENVIRONMENTS=======================================================
 
-%\declaretheoremstyle[
-%headfont=\bfseries,
-%numbered=yes,
-%bodyfont=\itshape,
-%spaceabove=\topsep,
-%spacebelow=15pt,
-%headpunct=\\,
-%qed={\itshape That's All Folks!},
-%]{thmnew}
-%
-%\declaretheorem[
-%style=thmnew,
-%title=Beispiel,
-%parent=thm,
-%refname={example,examples},
-%Refname={Beispiel,Beispiele}
-%]{exmp2}
+\declaretheoremstyle[
+headfont=\bfseries,
+bodyfont=\itshape,
+spaceabove=\topsep,
+spacebelow=15pt,
+headpunct=\\,
+]{thmnew}
+
+\declaretheoremstyle[
+headfont=\bfseries,
+spaceabove=\topsep,
+spacebelow=15pt,
+headpunct=\\,
+%qed={//},
+]{defnew}
+
+\declaretheoremstyle[
+headfont=\bfseries,
+spaceabove=\topsep,
+spacebelow=15pt,
+headpunct={:\ },
+%qed={//},
+]{remnew}
 
 \newtheoremstyle{newthm}% name of the style to be used
 {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
