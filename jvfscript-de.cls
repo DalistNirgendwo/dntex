@@ -57,7 +57,8 @@
 %==========================LECTURE==============================================
 
 \newcounter{lecture}
-\newcommand{\lecture}{\stepcounter{lecture} \marginnote{Vorlesung \arabic{lecture}}}
+\newcommand{\lecture}{\stepcounter{lecture} \index[lecture]{Vorlesung \thelecture} \marginnote{Vorlesung \thelecture}}
+\makeindex[name=lecture,title=Vorlesungen,intoc]
 
 %=============ENVIRONMENTS=======================================================
 
