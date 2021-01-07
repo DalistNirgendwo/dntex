@@ -20,7 +20,7 @@
 \usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}		%Seitengröße
 \renewcommand{\epsilon}{\varepsilon}
 \newcommand{\image}[2]{\begin{center}
-		\includegraphics[width=#2]{#1}
+		\includegraphics[width=#2]{#1.png}
 	\end{center}}
 
 \let\emph\relax % there's no \RedeclareTextFontCommand
