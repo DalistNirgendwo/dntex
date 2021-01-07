@@ -13,6 +13,7 @@
 \usepackage{wrapfig}
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{thmtools}
+\usepackage{appendix}
 
 %==========================FORMATIERUNG=========================================
 
@@ -22,8 +23,12 @@
 		\includegraphics[width=#2]{#1}
 	\end{center}}
 
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
 \usepackage{aliascnt}
-\newaliascnt{chapter2}{chapter}%
+\newaliascnt{chaptertwo}{chapter}%
+\newaliascnt{sectiontwo}{section}%
 
 %==========================DEUTSCH==============================================
 
