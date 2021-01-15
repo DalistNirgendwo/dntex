@@ -5,29 +5,30 @@
 
 %===================PACKAGES=========================================================
 
-\usepackage{imakeidx}
-\usepackage{jvfmath}
+\usepackage{imakeidx}		%für In
+\usepackage{jvfmath}		%Mathe
 \usepackage{marginnote}		%für Anmerkungen, welche Vorlesung das ist
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
-\usepackage{lmodern}
-\usepackage{wrapfig}
+\usepackage{lmodern}		%schönere Schriftart
+\usepackage{wrapfig}		%um Bilder im Fließtext einzubingen
 \usepackage{hyperref}		%Hyperlinks
-\usepackage{thmtools}
-\usepackage{appendix}
+\usepackage{thmtools}		%für custom theorem-Umgebungen
+\usepackage{appendix}		%um einen Anhang zu deklarieren
 
 %==========================FORMATIERUNG=========================================
 
 \usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}		%Seitengröße
-\renewcommand{\epsilon}{\varepsilon}
-\newcommand{\image}[2]{\begin{center}
+\renewcommand{\epsilon}{\varepsilon}									%\epsilon ist sonst hässlich
+
+\newcommand{\image}[2]{\begin{center}									%für Einbindung von pngs
 		\includegraphics[width=#2]{#1.png}
 	\end{center}}
 
-\let\emph\relax % there's no \RedeclareTextFontCommand
+\let\emph\relax 														%für Einbindung von pdfs aus Inkscape
 \DeclareTextFontCommand{\emph}{\bfseries\em}
 
-\usepackage{aliascnt}
-\newaliascnt{chaptertwo}{chapter}%
+\usepackage{aliascnt}													%legt eine Kopie vom chapter und section-counter an, 
+\newaliascnt{chaptertwo}{chapter}%										%die gleichzeitig hochtickt, aber nicht von \thesection beeinflusst wird
 \newaliascnt{sectiontwo}{section}%
 
 %==========================DEUTSCH==============================================
@@ -50,18 +51,18 @@
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \setkomafont{pageheadfoot}{\upshape}
-\renewcommand{\chaptermark}[1]{%
+\renewcommand{\chaptermark}[1]{%								#ändert die Formatierung, wie chapter und section in Herader angezeigt werden
 	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
-\rehead{\leftmark}
-\lohead{\rightmark}
+\rehead{\leftmark}												%recht auf geraden Seiten steht das Kapitel
+\lohead{\rightmark}												%links auf ungeraden die Section
 \chead{}
-\ofoot{\thepage}
+\ofoot{\thepage}												%außen unten steht die Seitenzahl
 
 
 %==========================LECTURE==============================================
 
-\newcounter{lecture}
+\newcounter{lecture}											%Nur für Vorlesungsnotizen relevant
 \newcommand{\lecture}{\stepcounter{lecture} \index[lecture]{Vorlesung \thelecture} \marginnote{Vorlesung \thelecture}}
 \makeindex[name=lecture,title=Vorlesungen,intoc]
 
