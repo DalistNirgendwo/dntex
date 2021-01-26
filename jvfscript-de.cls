@@ -71,53 +71,23 @@
 \declaretheoremstyle[
 headfont=\bfseries,
 bodyfont=\itshape,
-spaceabove=\topsep,
-spacebelow=15pt,
+spaceabove=12pt,
+spacebelow=30pt,
 headpunct=\\,
 ]{thmnew}
 
 \declaretheoremstyle[
 headfont=\bfseries,
-spaceabove=\topsep,
-spacebelow=15pt,
+spaceabove=12pt,
+spacebelow=30pt,
 headpunct=\\,
 %qed={//},
 ]{defnew}
 
 \declaretheoremstyle[
 headfont=\bfseries,
-spaceabove=\topsep,
-spacebelow=15pt,
+spaceabove=12pt,
+spacebelow=24pt,
 headpunct={:\ },
 %qed={//},
 ]{remnew}
-
-\newtheoremstyle{newthm}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{15pt}% measure of space to leave below the theorem. E.g.: 3pt
-{\itshape}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{\\}% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-\newtheoremstyle{newdef}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{15pt}% measure of space to leave below the theorem. E.g.: 3pt
-{}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{\\}% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-\newtheoremstyle{newrem}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{\topsep}% measure of space to leave below the theorem. E.g.: 3pt
-{}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{: }% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}

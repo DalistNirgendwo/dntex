@@ -4,7 +4,7 @@
 %===================PACKAGES=========================================================
 
 \usepackage{enumitem,microtype,lmodern}								%Diverse
-\usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}		%assorted ams packages
+\usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}				%assorted ams packages
 \usepackage{tikz,tikz-cd}
 
 %==========================COMMANDS==============================================
@@ -119,31 +119,37 @@
 %=====various homomorphisms====
 \DeclareMathOperator{\Aff}{Aff}
 \DeclareMathOperator{\Aut}{Aut}
-\newcommand{\Hom}[1]{\operatorname{Hom} \left( #1 \right)}
+%\newcommand{\Hom}[1]{\operatorname{Hom} \left( #1 \right)}
+\DeclareMathOperator{\Hom}{Hom}
 
 
 
 %=====quality of life==
-\newcommand{\existss}{\exists \,}
+\newcommand{\existss}{\exists \,}											%redefining the spaces for \exists and \forall
 \newcommand{\foralll}{\forall \,}
-\renewcommand{\d}{\ \operatorname{d}\hspace{-2px}}											
-\newcommand{\del}[1]{\partial_{#1}}
-\DeclareMathOperator{\supp}{supp}
-\DeclareMathOperator{\grad}{grad}
-\DeclareMathOperator{\im}{im}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\Span}{Span}
+
 \newcommand{\bound}[2]{\left.#1\right|_{#2}}		                        %Boundaries 
-\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
-\newcommand{\divides}{\,\mid\,}                     
+\renewcommand{\d}{\ \operatorname{d}\hspace{-2px}}							
+\newcommand{\del}[1]{\partial_{#1}}											%redefining the \partial command
+\newcommand{\divides}{\,\mid\,}
+\newcommand{\intd}[4]{\int_{#1}^{#2} #3 \ d#4}               
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}		%\bar, which depends on the arguments width
 \newcommand{\set}[2]{\left\{ #1 \,\middle|\, #2 \right\}}                   %for auto-sizing sets
-\newcommand\vertarrowbox[3][6ex]{%
+\newcommand\vertarrowbox[3][6ex]{%											%arrow below object, kinda like \underbrace
 	\begin{array}[t]{@{}c@{}} #2 \\
 		\left\uparrow\vcenter{\hrule height #1}\right.\kern-\nulldelimiterspace\\
 		\makebox[0pt]{\scriptsize#3}
 	\end{array}%
 }
+
+%=MathOperators=
+\DeclareMathOperator{\id}{id}												%identity
+\DeclareMathOperator{\im}{im}												%image of a funtion
+\DeclareMathOperator{\grad}{grad}											%gradient of a funtion
+\DeclareMathOperator{\sgn}{sgn}												%sign of a permutation
+\DeclareMathOperator{\Span}{Span}											%span of a set of vectors
+\DeclareMathOperator{\supp}{supp}											%support of a function
+\DeclareMathOperator{\vol}{vol}												%volume
 
 
 %=====for Analysis on Manifolds==
