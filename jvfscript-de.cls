@@ -76,7 +76,7 @@
 %==========================LECTURE==============================================
 
 \newcounter{lecture}											%Nur für Vorlesungsnotizen relevant
-\newcommand{\lecture}{\stepcounter{lecture} \index[lecture]{Vorlesung \thelecture} \marginnote{Vorlesung \thelecture}}
+\newcommand{\lecture}{\stepcounter{lecture} \index[lecture]{Vorlesung \arabic{lecture}} \marginnote{Vorlesung \thelecture}}
 \makeindex[name=lecture,title=Vorlesungen,intoc]
 
 %=============ENVIRONMENTS=======================================================
