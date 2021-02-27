@@ -24,7 +24,20 @@
 		\includegraphics[width=#2]{#1.png}
 	\end{center}}
 
-\let\emph\relax 														%für Einbindung von pdfs aus Inkscape
+%==============BILDER============================================================
+
+\newcommand{\wrapincfig}[2]{%											%für Einbindung von pdfs aus Inkscape
+	\def\svgwidth{#2}
+	\import{./images/}{#1.pdf_tex}
+}
+
+\newcommand{\incfig}[2]{%
+	\begin{center}
+		\wrapincfig{#1}{#2}
+	\end{center}
+}
+
+\let\emph\relax 														
 \DeclareTextFontCommand{\emph}{\bfseries\em}
 
 \usepackage{aliascnt}													%legt eine Kopie vom chapter und section-counter an, 
