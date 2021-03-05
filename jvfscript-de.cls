@@ -3,6 +3,7 @@
 
 \LoadClass[a4paper,12pt]{scrbook}
 
+
 %===================PACKAGES=========================================================
 
 \usepackage{imakeidx}		%für In
@@ -15,34 +16,71 @@
 \usepackage{thmtools}		%für custom theorem-Umgebungen
 \usepackage{appendix}		%um einen Anhang zu deklarieren
 
+
 %==========================FORMATIERUNG=========================================
 
-\usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}		%Seitengröße
+%Seitengröße
+\usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}	
+%Zeilenabstand. Kann man auch später nochmal reinhämmern, falls man es ändern will
+\setstretch{1.15}
+
+%\epsilon ist sonst hässlich
 \renewcommand{\epsilon}{\varepsilon}									%\epsilon ist sonst hässlich
 
-\newcommand{\image}[2]{\begin{center}									%für Einbindung von pngs
+%für Einbindung von pngs
+\newcommand{\image}[2]{\begin{center}									
 		\includegraphics[width=#2]{#1.png}
 	\end{center}}
 
+%Hypersetup, damit die Links lila sind
+\usepackage{xcolor}														
+	\definecolor{goodpurple}{RGB}{128,0,128}
+	\hypersetup{
+		colorlinks=true,
+		linkcolor=goodpurple,
+		filecolor=goodpurple,      
+		urlcolor=goodpurple,
+		bookmarksopen = true
+	}
+
+%damit \emph fett und kursiv ist
+\let\emph\relax 																							
+	\DeclareTextFontCommand{\emph}{\bfseries\em}
+	
+%damit auch die zweite Seite von ToCs keine Header hat
+\AfterTOCHead{\pagestyle{plain}}
+\AfterStartingTOC{\clearpage}
+
+
 %==============BILDER============================================================
 
-\newcommand{\wrapincfig}[2]{%											%für Einbindung von pdfs aus Inkscape
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+%für Einbindung von pdfs aus Inkscape in Wrapfigs
+\newcommand{\wrapincfig}[2]{%
 	\def\svgwidth{#2}
 	\import{./images/}{#1.pdf_tex}
 }
 
-\newcommand{\incfig}[2]{%
+%für die alleinstehende Einbindung von pdfs aus Inkscape
+\newcommand{\incfig}[2]{%	
 	\begin{center}
 		\wrapincfig{#1}{#2}
 	\end{center}
 }
 
-\let\emph\relax 														
-\DeclareTextFontCommand{\emph}{\bfseries\em}
 
-\usepackage{aliascnt}													%legt eine Kopie vom chapter und section-counter an, 
-\newaliascnt{chaptertwo}{chapter}%										%die gleichzeitig hochtickt, aber nicht von \thesection beeinflusst wird
-\newaliascnt{sectiontwo}{section}%
+%==========================BACKEND==============================================
+
+%legt eine Kopie vom chapter und section-counter an,
+%die gleichzeitig hochtickt, aber nicht von \thesection beeinflusst wird
+\usepackage{aliascnt}										
+\newaliascnt{chaptertwo}{chapter}							
+\newaliascnt{sectiontwo}{section}
+
 
 %==========================DEUTSCH==============================================
 
@@ -58,6 +96,7 @@
 \usepackage{csquotes}
 \MakeOuterQuote{"}
 
+
 %==============HEADER============================================================
 
 \RequirePackage[headsepline]{scrlayer-scrpage}
@@ -67,6 +106,7 @@
 \renewcommand{\chaptermark}[1]{%								#ändert die Formatierung, wie chapter und section in Herader angezeigt werden
 	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
 \rehead{\leftmark}												%recht auf geraden Seiten steht das Kapitel
 \lohead{\rightmark}												%links auf ungeraden die Section
 \chead{}
@@ -75,9 +115,18 @@
 
 %==========================LECTURE==============================================
 
-\newcounter{lecture}											%Nur für Vorlesungsnotizen relevant
-\newcommand{\lecture}{\stepcounter{lecture} \index[lecture]{Vorlesung \arabic{lecture}} \marginnote{Vorlesung \thelecture}}
-\makeindex[name=lecture,title=Vorlesungen,intoc]
+\newcounter{lecture}
+\DeclareNewTOC[owner=jvfscript-de,listname=Vorlesungsverzeichnis,type=lecture,types=lectures, name=Vorlesung]{listoflectures}
+
+\def\@lecture{}											%Nur für Vorlesungsnotizen relevant
+\newcommand{\lecture}{%
+	\stepcounter{lecture}
+	\marginnote{Vorlesung \thelecture}
+	\addxcontentsline{listoflectures}{section}[\thelecture]{Vorlesung \thelecture}
+}
+
+\newcommand{\autolabel}{\label{\arabic{chaptertwo}.\arabic{thm}}}
+
 
 %=============ENVIRONMENTS=======================================================
 
