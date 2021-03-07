@@ -6,7 +6,7 @@
 
 %===================PACKAGES=========================================================
 
-\usepackage{imakeidx}		%für In
+\usepackage{imakeidx}		%für Indices
 \usepackage{jvfmath}		%Mathe
 \usepackage{marginnote}		%für Anmerkungen, welche Vorlesung das ist
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
@@ -25,12 +25,7 @@
 \setstretch{1.15}
 
 %\epsilon ist sonst hässlich
-\renewcommand{\epsilon}{\varepsilon}									%\epsilon ist sonst hässlich
-
-%für Einbindung von pngs
-\newcommand{\image}[2]{\begin{center}									
-		\includegraphics[width=#2]{#1.png}
-	\end{center}}
+\renewcommand{\epsilon}{\varepsilon}
 
 %Hypersetup, damit die Links lila sind
 \usepackage{xcolor}														
@@ -72,6 +67,11 @@
 	\end{center}
 }
 
+%für Einbindung von pngs
+\newcommand{\image}[2]{\begin{center}									
+	\includegraphics[width=#2]{#1.png}
+\end{center}}
+
 
 %==========================BACKEND==============================================
 
@@ -85,10 +85,16 @@
 %==========================DEUTSCH==============================================
 
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}								%Sprache. Falls es Englisch sein soll einfach zum Kommentar machen
-\usepackage[babel,german=quotes]{csquotes}				%deutsche Anführungszeichen bei \enquote{}
+
+%Sprache. Falls es Englisch sein soll einfach zum Kommentar machen
+\usepackage[ngerman]{babel}
+
+%deutsche Anführungszeichen bei \enquote{}								
+\usepackage[babel,german=quotes]{csquotes}				
 \usepackage[T1]{fontenc}
-\usepackage{hyphsubst}									%deutsche Worttrennung
+
+%deutsche Worttrennung
+\usepackage{hyphsubst}									
 \HyphSubstIfExists{ngerman-x-latest}{%
 	\HyphSubstLet{ngerman}{ngerman-x-latest}}{}
 \HyphSubstIfExists{german-x-latest}{%
@@ -103,14 +109,19 @@
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \setkomafont{pageheadfoot}{\upshape}
-\renewcommand{\chaptermark}[1]{%								#ändert die Formatierung, wie chapter und section in Herader angezeigt werden
+
+%ändert die Formatierung, wie chapter und section in Herader angezeigt werden
+\renewcommand{\chaptermark}[1]{%								
 	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 
-\rehead{\leftmark}												%recht auf geraden Seiten steht das Kapitel
-\lohead{\rightmark}												%links auf ungeraden die Section
+%rechts auf geraden Seiten steht das Kapitel
+\rehead{\leftmark}
+%links auf ungeraden die Section												
+\lohead{\rightmark}												
 \chead{}
-\ofoot{\thepage}												%außen unten steht die Seitenzahl
+%außen unten steht die Seitenzahl
+\ofoot{\thepage}												
 
 
 %==========================LECTURE==============================================
@@ -118,7 +129,8 @@
 \newcounter{lecture}
 \DeclareNewTOC[owner=jvfscript-de,listname=Vorlesungsverzeichnis,type=lecture,types=lectures, name=Vorlesung]{listoflectures}
 
-\def\@lecture{}											%Nur für Vorlesungsnotizen relevant
+%Nur für Vorlesungsnotizen relevant
+\def\@lecture{}											
 \newcommand{\lecture}{%
 	\stepcounter{lecture}
 	\marginnote{Vorlesung \thelecture}
