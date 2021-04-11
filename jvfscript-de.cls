@@ -131,10 +131,10 @@
 
 %Nur für Vorlesungsnotizen relevant
 \def\@lecture{}											
-\newcommand{\lecture}{%
+\newcommand{\lecture}[1]{%
 	\stepcounter{lecture}
 	\marginnote{Vorlesung \thelecture}
-	\addxcontentsline{listoflectures}{section}[\thelecture]{Vorlesung \thelecture}
+	\addxcontentsline{listoflectures}{section}[]{Vorlesung \thelecture{} vom #1}
 }
 
 \newcommand{\autolabel}{\label{\arabic{chaptertwo}.\arabic{thm}}}
@@ -143,25 +143,25 @@
 %=============ENVIRONMENTS=======================================================
 
 \declaretheoremstyle[
-headfont=\bfseries,
-bodyfont=\itshape,
-spaceabove=12pt,
-spacebelow=30pt,
-headpunct=\\,
+	headfont=\bfseries,
+	bodyfont=\itshape,
+	spaceabove=12pt,
+	spacebelow=30pt,
+	headpunct={\\},
 ]{thmnew}
 
 \declaretheoremstyle[
-headfont=\bfseries,
-spaceabove=12pt,
-spacebelow=30pt,
-headpunct=\\,
-%qed={//},
+	headfont=\bfseries,
+	spaceabove=12pt,
+	spacebelow=30pt,
+	headpunct={\\},
+	%qed={//},
 ]{defnew}
 
 \declaretheoremstyle[
-headfont=\bfseries,
-spaceabove=12pt,
-spacebelow=24pt,
-headpunct={:\ },
-%qed={//},
+	headfont=\bfseries,
+	spaceabove=12pt,
+	spacebelow=24pt,
+	headpunct={:\ },
+	%qed={//},
 ]{remnew}
