@@ -142,19 +142,23 @@
 
 %=============ENVIRONMENTS=======================================================
 
+\makeatletter
+\newcommand\myonlynewline{\newline\@afterheading}
+\makeatother
+
 \declaretheoremstyle[
 	headfont=\bfseries,
 	bodyfont=\itshape,
 	spaceabove=12pt,
 	spacebelow=30pt,
-	headpunct={\\},
+	headpunct={\myonlynewline},
 ]{thmnew}
 
 \declaretheoremstyle[
 	headfont=\bfseries,
 	spaceabove=12pt,
 	spacebelow=30pt,
-	headpunct={\\},
+	headpunct={\myonlynewline},
 	%qed={//},
 ]{defnew}
 
