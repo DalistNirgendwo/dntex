@@ -133,7 +133,7 @@
 \def\@lecture{}											
 \newcommand{\lecture}[1]{%
 	\stepcounter{lecture}
-	\marginnote{Vorlesung \thelecture}
+	\marginnote{\normalfont Vorlesung \thelecture, #1}
 	\addxcontentsline{listoflectures}{section}[]{Vorlesung \thelecture{} vom #1}
 }
 
