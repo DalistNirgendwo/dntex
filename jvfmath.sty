@@ -44,6 +44,7 @@
 \newcommand{\MkFrak}[1]{\expandafter\def\csname #1frak\endcsname{\mathfrak{#1}}}
 \newcommand{\MkScr}[1]{\expandafter\def\csname #1scr\endcsname{\mathscr{#1}}}
 \newcommand{\MkRm}[1]{\expandafter\def\csname #1rm\endcsname{\mathrm{#1}}}
+\newcommand{\MkBar}[1]{\expandafter\def\csname #1bar\endcsname{\bar{#1}}}
 
 \makeatletter
 \@for\i:=\UpperAlphabet\do{\expandafter\MkBb\i}		%\Abb
@@ -51,9 +52,11 @@
 \@for\i:=\UpperAlphabet\do{\expandafter\MkFrak\i}	%\Afrak
 \@for\i:=\UpperAlphabet\do{\expandafter\MkScr\i}	%\Ascr
 \@for\i:=\UpperAlphabet\do{\expandafter\MkRm\i}		%\Arm
+\@for\i:=\UpperAlphabet\do{\expandafter\MkBar\i}	%\Abar
 
 \@for\i:=\LowerAlphabet\do{\expandafter\MkFrak\i}	%\afrak
 \@for\i:=\LowerAlphabet\do{\expandafter\MkRm\i}		%\arm
+\@for\i:=\LowerAlphabet\do{\expandafter\MkBar\i}	%\abar
 \makeatother
 
 %=====various homomorphisms====
