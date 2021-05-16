@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jvfscript}[2020/07/07 Johannes von Falkensteins Standardklasse für Vorlesungsskripte]
+\ProvidesClass{jvfscript}[2021/05/16 Johannes von Falkenstein's standard class for lecture notes]
 
 \LoadClass[a4paper,12pt]{scrbook}
 
@@ -13,11 +13,71 @@
 \usepackage{lmodern}
 \usepackage{wrapfig}
 \usepackage{hyperref}		%Hyperlinks
+\usepackage{thmtools}		%for custom theorem-environments
+\usepackage{appendix}		%to declare an appendix
 
 %==========================FORMATIERUNG=========================================
 
-\usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}		%Seitengröße
+%page size
+\usepackage[inner=3cm, outer=3cm, top=3cm, bottom=3cm]{geometry}	
+%line spacing
+\setstretch{1.15}
+
+%\epsilon ist sonst hässlich
 \renewcommand{\epsilon}{\varepsilon}
+
+%Hypersetup, making all hyperlinks purple
+\usepackage{xcolor}														
+\definecolor{goodpurple}{RGB}{128,0,128}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=goodpurple,
+	filecolor=goodpurple,      
+	urlcolor=goodpurple,
+	bookmarksopen = true
+}
+
+%making \emph bold and italic
+\let\emph\relax 																							
+\DeclareTextFontCommand{\emph}{\bfseries\em}
+
+%no headers in frontmatter
+\AfterTOCHead{\pagestyle{plain}}
+\AfterStartingTOC{\clearpage}
+
+
+%==============BILDER============================================================
+
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+%for including pdfs from inkspace in wrapfig
+\newcommand{\wrapincfig}[2]{%
+	\def\svgwidth{#2}
+	\import{./images/}{#1.pdf_tex}
+}
+
+%for including independent pdfs from inkspace
+\newcommand{\incfig}[2]{%	
+	\begin{center}
+		\wrapincfig{#1}{#2}
+	\end{center}
+}
+
+%for including pngs
+\newcommand{\image}[2]{\begin{center}									
+		\includegraphics[width=#2]{#1.png}
+\end{center}}
+
+%==========================BACKEND==============================================
+
+%produces a copy of the chapter and section-counters,
+%that tick accordingly but don't influence \thesection
+\usepackage{aliascnt}										
+\newaliascnt{chaptertwo}{chapter}							
+\newaliascnt{sectiontwo}{section}
 
 %==============HEADER============================================================
 
@@ -25,47 +85,61 @@
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \setkomafont{pageheadfoot}{\upshape}
-\renewcommand{\chaptermark}[1]{%
+
+%changes the formating of how chapter and section are displayed in the header
+\renewcommand{\chaptermark}[1]{%								
 	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+%chapter on the right side of even pages
 \rehead{\leftmark}
-\lohead{\rightmark}
+%section on the left of odd pages												
+\lohead{\rightmark}												
 \chead{}
-\ofoot{\thepage}
+%page number on the outer side
+\ofoot{\thepage}	
 
 %==========================LECTURE==============================================
 
 \newcounter{lecture}
-\newcommand{\lecture}{\stepcounter{lecture} \marginnote{Vorlesung \arabic{lecture}}}
+\DeclareNewTOC[owner=jvfscript-de,listname=List of lectures,type=lecture,types=lectures, name=lecture]{listoflectures}
+
+%only relevant for lecture notes
+\def\@lecture{}											
+\newcommand{\lecture}[1]{%
+	\stepcounter{lecture}
+	\marginnote{\normalfont Lecture \thelecture, #1}
+	\addxcontentsline{listoflectures}{section}[]{Lecture \thelecture{} from #1}
+}
+
+\newcommand{\autolabel}{\label{\arabic{chaptertwo}.\arabic{thm}}}
 
 %=============ENVIRONMENTS=======================================================
 
-\newtheoremstyle{newthm}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{15pt}% measure of space to leave below the theorem. E.g.: 3pt
-{\itshape}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{\\}% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\makeatletter
+\newcommand\myonlynewline{\newline\@afterheading}
+\makeatother
 
-\newtheoremstyle{newdef}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{15pt}% measure of space to leave below the theorem. E.g.: 3pt
-{}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{\\}% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\declaretheoremstyle[
+headfont=\bfseries,
+bodyfont=\itshape,
+spaceabove=12pt,
+spacebelow=30pt,
+headpunct={\myonlynewline},
+]{thmnew}
 
-\newtheoremstyle{newrem}% name of the style to be used
-{\topsep}% measure of space to leave above the theorem. E.g.: 3pt
-{\topsep}% measure of space to leave below the theorem. E.g.: 3pt
-{}% name of font to use in the body of the theorem
-{7.5pt}% measure of space to indent
-{\bfseries}% name of head font
-{: }% punctuation between head and body
-{ }% space after theorem head; " " = normal interword space
-{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\declaretheoremstyle[
+headfont=\bfseries,
+spaceabove=12pt,
+spacebelow=30pt,
+headpunct={\myonlynewline},
+%qed={//},
+]{defnew}
+
+\declaretheoremstyle[
+headfont=\bfseries,
+spaceabove=12pt,
+spacebelow=24pt,
+headpunct={:\ },
+%qed={//},
+]{remnew}
