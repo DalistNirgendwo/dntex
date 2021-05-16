@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jvfscript-de}[2020/07/07 Johannes von Falkensteins Standardklasse für Vorlesungsskripte]
+\ProvidesClass{jvfscript-de}[2021/05/16 Johannes von Falkensteins Standardklasse für Vorlesungsskripte]
 
 \LoadClass[a4paper,12pt]{scrbook}
 
@@ -110,7 +110,7 @@
 \clearscrheadfoot
 \setkomafont{pageheadfoot}{\upshape}
 
-%ändert die Formatierung, wie chapter und section in Herader angezeigt werden
+%ändert die Formatierung, wie chapter und section im Header angezeigt werden
 \renewcommand{\chaptermark}[1]{%								
 	\markboth{\chaptername\ \thechapter:\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
