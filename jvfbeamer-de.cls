@@ -4,17 +4,20 @@
 \LoadClass[12pt]{beamer}
 
 
-\addtobeamertemplate{navigation symbols}{}{%
-	\usebeamerfont{footline}%
-	\usebeamercolor[fg]{footline}%
-	\hspace{1em}%
-	\insertframenumber/\inserttotalframenumber
-}
+%\addtobeamertemplate{navigation symbols}{}{%
+%	\usebeamerfont{footline}%
+%	\usebeamercolor[fg]{footline}%
+%	\hspace{1em}%
+%	\insertframenumber/\inserttotalframenumber
+%}
+\setbeamertemplate{itemize items}[circle]
 
 %===================COLOURS=========================================================
 
 \usetheme{Goettingen}
 \usecolortheme{whale}
+\useoutertheme{infolines} % Alternatively: miniframes, infolines, split
+\useinnertheme{circles}
 \definecolor{UBCblue}{RGB}{128,0,128} % UBC Blue (primary)
 \definecolor{UBCgrey}{rgb}{0,0,0} % UBC Grey (secondary)
 
@@ -22,11 +25,11 @@
 \setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
 \setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
 \setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
-\setbeamercolor{structure}{fg=black} % itemize, enumerate, etc
-\setbeamercolor{section in toc}{fg=black} % TOC sections
+%\setbeamercolor{structure}{fg=black} % itemize, enumerate, etc
+%\setbeamercolor{section in toc}{fg=black} % TOC sections
 
 % Override palette coloring with secondary
-\setbeamercolor{subsection in head/foot}{bg=black,fg=white}
+%\setbeamercolor{subsection in head/foot}{bg=black,fg=white}
 
 
 %===================PACKAGES=========================================================
