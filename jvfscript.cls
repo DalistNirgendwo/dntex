@@ -15,6 +15,7 @@
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{thmtools}		%for custom theorem-environments
 \usepackage{appendix}		%to declare an appendix
+\usepackage{enumitem}
 
 %==========================FORMATIERUNG=========================================
 
