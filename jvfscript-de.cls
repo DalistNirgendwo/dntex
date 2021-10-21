@@ -12,9 +12,11 @@
 \usepackage{setspace}		%\setstretch, also Zeilenabstand
 \usepackage{lmodern}		%schönere Schriftart
 \usepackage{wrapfig}		%um Bilder im Fließtext einzubingen
-\usepackage{hyperref}		%Hyperlinks
 \usepackage{thmtools}		%für custom theorem-Umgebungen
 \usepackage{appendix}		%um einen Anhang zu deklarieren
+\usepackage{enumitem}
+\usepackage{hyperref}		%Hyperlinks
+\usepackage{cleveref}
 
 
 %==========================FORMATIERUNG=========================================
