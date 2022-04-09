@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jvfscript}[2021/05/16 Johannes von Falkenstein's standard class for lecture notes]
+\ProvidesClass{dnscript}[2021/05/16 Dalist Nirgendwo's standard class for lecture notes]
 
 \LoadClass[a4paper,12pt]{scriptbase}	
 

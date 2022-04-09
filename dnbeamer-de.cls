@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jvfbeamer-de}[2021/05/16 Johannes von Falkensteins Standardklasse für Vorträge]
+\ProvidesClass{dnbeamer-de}[2021/05/16 Dalist Nirgendwos Standardklasse für Vorträge]
 
 \LoadClass[12pt]{beamer}
 
@@ -34,7 +34,7 @@
 
 %===================PACKAGES=========================================================
 
-\usepackage{jvfmath}
+\usepackage{dnmath}
 \usepackage{lmodern}
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{thmtools}		%für custom theorem-Umgebungen

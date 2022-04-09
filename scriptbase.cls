@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{scriptbase}[2021/05/16 The basis for Johannes von Falkenstein's standard class for lecture notes]
+\ProvidesClass{scriptbase}[2021/05/16 The basis for Dalist Nirgendwo's standard classes for lecture notes]
 
 \LoadClass[a4paper,12pt]{scrbook}
 
@@ -7,7 +7,7 @@
 %===================PACKAGES=========================================================
 
 \usepackage{imakeidx}		%creating indices
-\usepackage{jvfmath}		%maths
+\usepackage{dnmath}			%maths
 \usepackage{marginnote}		%for comments on which lecture this is
 \usepackage{setspace}		%\setstretch, i.e. line spacing
 \usepackage{lmodern}		%better font

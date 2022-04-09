@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{jvfscript-de}[2021/05/16 Johannes von Falkensteins Standardklasse für Vorlesungsskripte]
+\ProvidesClass{dnscript-de}[2021/05/16 Dalist Nirgendwos Standardklasse für Vorlesungsskripte]
 
 \LoadClass[a4paper,12pt]{scriptbase}
 
