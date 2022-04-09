@@ -1,7 +1,13 @@
 These packages depend on each other as follows:
 
-jvfscript.cls requires
-	jvfscriptstyle
+dnbeamer-de.cls requires
+	dnmath.sty
 
-jvfscriptstyle.sty requires
-	jvfmath
+dnscript.cls requires
+	scriptbase.cls
+
+dnscript-de.cls requires
+	scriptbase.cls
+
+scirptbase.cls requires
+	dnmath.sty
