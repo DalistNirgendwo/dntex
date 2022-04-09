@@ -41,8 +41,8 @@
 	}
 
 %making \emph bold and italic
-\let\emph\relax 																							
-	\DeclareTextFontCommand{\emph}{\bfseries\em}
+%\let\emph\relax 																							
+%	\DeclareTextFontCommand{\emph}{\bfseries\em}
 
 %no headers in frontmatter
 \AfterTOCHead{\pagestyle{plain}}

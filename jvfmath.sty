@@ -46,6 +46,8 @@
 \newcommand{\MkScr}[1]{\expandafter\def\csname #1scr\endcsname{\mathscr{#1}}}
 \newcommand{\MkRm}[1]{\expandafter\def\csname #1rm\endcsname{\mathrm{#1}}}
 \newcommand{\MkBar}[1]{\expandafter\def\csname #1bar\endcsname{\bar{#1}}}
+\newcommand{\MkHat}[1]{\expandafter\def\csname #1hat\endcsname{\hat{#1}}}
+\newcommand{\MkTilde}[1]{\expandafter\def\csname #1tilde\endcsname{\tilde{#1}}}
 
 \makeatletter
 \@for\i:=\UpperAlphabet\do{\expandafter\MkBb\i}		%\Abb
@@ -54,10 +56,14 @@
 \@for\i:=\UpperAlphabet\do{\expandafter\MkScr\i}	%\Ascr
 \@for\i:=\UpperAlphabet\do{\expandafter\MkRm\i}		%\Arm
 \@for\i:=\UpperAlphabet\do{\expandafter\MkBar\i}	%\Abar
+\@for\i:=\UpperAlphabet\do{\expandafter\MkHat\i}	%\Ahat
+\@for\i:=\UpperAlphabet\do{\expandafter\MkTilde\i}	%\Atilde
 
 \@for\i:=\LowerAlphabet\do{\expandafter\MkFrak\i}	%\afrak
 \@for\i:=\LowerAlphabet\do{\expandafter\MkRm\i}		%\arm
 \@for\i:=\LowerAlphabet\do{\expandafter\MkBar\i}	%\abar
+\@for\i:=\LowerAlphabet\do{\expandafter\MkHat\i}	%\ahat
+\@for\i:=\LowerAlphabet\do{\expandafter\MkTilde\i}	%\atilde
 \makeatother
 
 %=====various homomorphisms====
@@ -99,6 +105,7 @@
 \DeclareMathOperator{\rad}{rad}					%radical
 \DeclareMathOperator{\sgn}{sgn}					%sign of a permutation
 \DeclareMathOperator{\Span}{Span}				%span of a set of vectors
+\DeclareMathOperator{\vspan}{span}				%span of a set of vectors
 \DeclareMathOperator{\supp}{supp}				%support of a function
 \DeclareMathOperator{\vol}{vol}					%volume
 
