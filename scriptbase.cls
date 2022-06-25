@@ -17,6 +17,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{cleveref}
+\usepackage[colorinlistoftodos]{todonotes}
 
 
 %==========================FORMATIERUNG=========================================
