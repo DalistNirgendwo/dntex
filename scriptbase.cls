@@ -38,6 +38,7 @@
 		linkcolor=goodpurple,
 		filecolor=goodpurple,      
 		urlcolor=goodpurple,
+		citecolor=goodpurple,
 		bookmarksopen = true
 	}
 
