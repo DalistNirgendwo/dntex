@@ -39,6 +39,27 @@
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{thmtools}		%für custom theorem-Umgebungen
 \usepackage{tcolorbox}
+\usepackage{wrapfig}		%for embedding images in text
+
+
+%==============PICTURES============================================================
+
+%\usepackage{import}
+%\usepackage{xifthen}
+%\usepackage{pdfpages}
+%\usepackage{transparent}
+%
+%%for including pdfs from inkspace in wrapfig
+%\newcommand{\wrapincfig}[2]{%
+%	\def\svgwidth{#2}
+%	\import{./images/}{#1.pdf_tex}
+%}
+%
+%%for including independent pdfs from inkspace
+%\newcommand{\incfig}[2]{%	
+%	\begin{center}
+%		\wrapincfig{#1}{#2}
+%	\end{center}
 
 
 %==========================DEUTSCH==============================================
