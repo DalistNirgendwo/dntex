@@ -6,7 +6,7 @@
 %==========================LECTURE==============================================
 
 \newcounter{lecture}
-\DeclareNewTOC[owner=jvfscript,listname=List of lectures,type=lecture,types=lectures, name=lecture]{listoflectures}
+\DeclareNewTOC[owner=dnscript,listname=List of lectures,type=lecture,types=lectures, name=lecture]{listoflectures}
 
 %only relevant for lecture notes
 \def\@lecture{}											

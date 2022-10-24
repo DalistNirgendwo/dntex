@@ -28,7 +28,7 @@
 %==========================LECTURE==============================================
 
 \newcounter{lecture}
-\DeclareNewTOC[owner=jvfscript-de,listname=Vorlesungsverzeichnis,type=lecture,types=lectures, name=Vorlesung]{listoflectures}
+\DeclareNewTOC[owner=dnscript-de,listname=Vorlesungsverzeichnis,type=lecture,types=lectures, name=Vorlesung]{listoflectures}
 
 %Nur für Vorlesungsnotizen relevant
 \def\@lecture{}											
