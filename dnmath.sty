@@ -3,7 +3,7 @@
 
 %===================PACKAGES=========================================================
 
-\usepackage{microtype,lmodern}								%Diverse
+\usepackage{microtype,lmodern, bm}								%Diverse
 \usepackage{amssymb,mathtools,amsmath,amsfonts,amsthm}				%assorted ams packages
 \usepackage{tikz,tikz-cd}
 
@@ -48,6 +48,7 @@
 \newcommand{\MkBar}[1]{\expandafter\def\csname #1bar\endcsname{\bar{#1}}}
 \newcommand{\MkHat}[1]{\expandafter\def\csname #1hat\endcsname{\hat{#1}}}
 \newcommand{\MkTilde}[1]{\expandafter\def\csname #1tilde\endcsname{\tilde{#1}}}
+\newcommand{\Mkbm}[1]{\expandafter\def\csname #1bm\endcsname{\bm{#1}}}
 
 \makeatletter
 \@for\i:=\UpperAlphabet\do{\expandafter\MkBb\i}		%\Abb
@@ -58,12 +59,14 @@
 \@for\i:=\UpperAlphabet\do{\expandafter\MkBar\i}	%\Abar
 \@for\i:=\UpperAlphabet\do{\expandafter\MkHat\i}	%\Ahat
 \@for\i:=\UpperAlphabet\do{\expandafter\MkTilde\i}	%\Atilde
+\@for\i:=\UpperAlphabet\do{\expandafter\Mkbm\i}	    %\Abm
 
 \@for\i:=\LowerAlphabet\do{\expandafter\MkFrak\i}	%\afrak
 \@for\i:=\LowerAlphabet\do{\expandafter\MkRm\i}		%\arm
 \@for\i:=\LowerAlphabet\do{\expandafter\MkBar\i}	%\abar
 \@for\i:=\LowerAlphabet\do{\expandafter\MkHat\i}	%\ahat
 \@for\i:=\LowerAlphabet\do{\expandafter\MkTilde\i}	%\atilde
+\@for\i:=\LowerAlphabet\do{\expandafter\Mkbm\i}	    %\abm
 \makeatother
 
 %=====various homomorphisms====
