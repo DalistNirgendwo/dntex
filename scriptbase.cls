@@ -18,6 +18,7 @@
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{cleveref}
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{scrhack}		%fixes warnings with float and listings
 
 
 %==========================FORMATIERUNG=========================================
@@ -89,7 +90,7 @@
 
 \RequirePackage[headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
-\clearscrheadfoot
+\clearpairofpagestyles
 \setkomafont{pageheadfoot}{\upshape}
 
 %changes the formating of how chapter and section are displayed in the header
