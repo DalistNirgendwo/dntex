@@ -12,13 +12,13 @@
 \usepackage{setspace}		%\setstretch, i.e. line spacing
 \usepackage{lmodern}		%better font
 \usepackage{wrapfig}		%for embedding images in text
-\usepackage{thmtools}		%for custom theorem-environments
 \usepackage{appendix}		%to declare an appendix
 \usepackage{enumitem}
 \usepackage{hyperref}		%Hyperlinks
 \usepackage{cleveref}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{scrhack}		%fixes warnings with float and listings
+\usepackage{thmtools}		%for custom theorem-environments
 
 
 %==========================FORMATIERUNG=========================================
