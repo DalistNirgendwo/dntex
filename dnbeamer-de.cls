@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dnbeamer-de}[2021/05/16 Dalist Nirgendwos Standardklasse für Vorträge]
 
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
+\ProcessOptions\relax
 \LoadClass[12pt]{beamer}
 
 
