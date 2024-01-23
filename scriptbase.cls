@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{scriptbase}[2021/05/16 The basis for Dalist Nirgendwo's standard classes for lecture notes]
 
-\LoadClass[a4paper,12pt]{scrbook}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrbook}}
+\ProcessOptions\relax
+\LoadClass[a4paper]{scrbook}
 
 
 %===================PACKAGES=========================================================

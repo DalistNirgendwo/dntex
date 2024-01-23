@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dnscript}[2021/05/16 Dalist Nirgendwo's standard class for lecture notes]
 
-\LoadClass[a4paper,12pt]{scriptbase}	
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scriptbase}}
+\ProcessOptions\relax
+\LoadClass{scriptbase}	
 
 %==========================LECTURE==============================================
 

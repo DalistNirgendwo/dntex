@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{dnscript-de}[2021/05/16 Dalist Nirgendwos Standardklasse für Vorlesungsskripte]
 
-\LoadClass[a4paper,12pt]{scriptbase}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scriptbase}}
+\ProcessOptions\relax
+\LoadClass{scriptbase}	
 
 
 %==========================DEUTSCH==============================================
