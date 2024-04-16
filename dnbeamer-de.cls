@@ -13,6 +13,7 @@
 %	\insertframenumber/\inserttotalframenumber
 %}
 \setbeamertemplate{itemize items}[circle]
+\renewcommand{\epsilon}{\varepsilon}
 
 %===================COLOURS=========================================================
 
@@ -32,6 +33,8 @@
 
 % Override palette coloring with secondary
 %\setbeamercolor{subsection in head/foot}{bg=black,fg=white}
+
+\usefonttheme{serif}
 
 
 %===================PACKAGES=========================================================
