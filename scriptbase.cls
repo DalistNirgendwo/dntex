@@ -121,23 +121,23 @@
 \declaretheoremstyle[
 	headfont=\bfseries,
 	bodyfont=\itshape,
-	spaceabove=12pt,
-	spacebelow=30pt,
+	spaceabove=1em,
+	spacebelow=2.5em,
 	headpunct={\myonlynewline},
 ]{thmnew}
 
 \declaretheoremstyle[
 	headfont=\bfseries,
-	spaceabove=12pt,
-	spacebelow=30pt,
+	spaceabove=1em,
+	spacebelow=2.5em,
 	headpunct={\myonlynewline},
 	%qed={//},
 ]{defnew}
 
 \declaretheoremstyle[
 	headfont=\bfseries,
-	spaceabove=12pt,
-	spacebelow=24pt,
-	headpunct={:\ },
+	spaceabove=1em,
+	spacebelow=2em,
+	headpunct={},
 	%qed={//},
 ]{remnew}
