@@ -106,7 +106,7 @@
 \lohead{\rightmark}												
 \chead{}
 %page number on the outer side
-\ofoot{\thepage}	
+\ofoot*{\pagemark}
 
 %==========================LECTURE==============================================
 
