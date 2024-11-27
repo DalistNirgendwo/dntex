@@ -28,8 +28,14 @@
 \setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
 \setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
 \setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+%\setbeamercolor{palette sidebar primary}{fg=white, bg=UBCblue}
+\setbeamercolor{palette sidebar secondary}{fg=black}
+\setbeamercolor{palette sidebar tertiary}{fg=UBCblue}
+\setbeamercolor{title in sidebar}{fg=black}
+%\setbeamercolor{section in sidebar shaded}{fg=red,bg=black}
 %\setbeamercolor{structure}{fg=black} % itemize, enumerate, etc
-%\setbeamercolor{section in toc}{fg=black} % TOC sections
+\setbeamercolor{section in toc}{fg=black} 		% TOC sections
+\setbeamercolor{subsection in toc}{fg=black} 	% TOC sections
 
 % Override palette coloring with secondary
 %\setbeamercolor{subsection in head/foot}{bg=black,fg=white}
