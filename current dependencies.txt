@@ -1,7 +1,13 @@
 These packages depend on each other as follows:
 
-dnbeamer-de.cls requires
+beamerbase.cls requires
 	dnmath.sty
+
+dnbeamer.cls requires
+	beamerbase.cls
+
+dnbeamer-de.cls requires
+	beamerbase.cls
 
 dnscript.cls requires
 	scriptbase.cls
