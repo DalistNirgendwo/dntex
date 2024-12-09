@@ -27,6 +27,8 @@
 \setbeamercolor{palette sidebar secondary}{fg=black}
 \setbeamercolor{palette sidebar tertiary}{fg=UBCblue}
 \setbeamercolor{title in sidebar}{fg=black}
+\setbeamercolor{section in sidebar}{fg=black}
+\setbeamercolor{subsection in sidebar}{fg=black}
 %\setbeamercolor{section in sidebar shaded}{fg=red,bg=black}
 %\setbeamercolor{structure}{fg=black} % itemize, enumerate, etc
 \setbeamercolor{section in toc}{fg=black} 		% TOC sections
